@@ -1,3 +1,4 @@
+//calculate area of circle
 #include<stdio.h>
 int main(){
     int rad;
