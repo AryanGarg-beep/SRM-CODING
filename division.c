@@ -5,5 +5,5 @@ int main(){
     printf("Enter 2 numbers\n");
     scanf("%d%d",&a,&b);
     result = a/b;
-    printf("Quotient: %f", result);
+    printf("Quotient: %f"  , result);
 }
