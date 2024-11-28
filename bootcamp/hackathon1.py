@@ -60,8 +60,6 @@ else:
     tax = grand_total * 0.15
     grand_total = grand_total + tax
 
-
-
 #surcharge of credit payment----------------------------------------------------------------
 print("-"*40)
 payment = input("Is the customer paying by cash or credit?: ")
@@ -70,6 +68,11 @@ if payment.lower() == 'credit':
     grand_total = grand_total + surcharge
 else:
     surcharge = 0
+
+#loyalty point system-----------------------------------------------------------------------
+points = grand_total/100
+if points < 1:
+    points = 0
 
 #printing final receipt---------------------------------------------------------------------
 if grand_total > 500:
@@ -84,11 +87,13 @@ if grand_total > 500:
     print("-"*40)
     print(f"original amount: {original:>15.2f}")
     print(f"Grand Total: {grand_total:>19.2f}")
+    print(f"Points: {points:>24.2f}")
     print("-"*40)
 else:
 #You are not worthy for a receipt if u pay below 500----------------------------------------
     print("-"*40)
     print(f"Grand Total: {grand_total:>19.2f}")
+    print(f"Points: {points:>24.2f}")
     print("-"*40)
 
 
